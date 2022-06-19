@@ -4,7 +4,6 @@
 
 - [About](#about)
 - [Running Server](#running-server)
-    - [Local](#local)
 - [Testing](#testing)
 - [Development](#development)
 - [Example](#example)
@@ -17,13 +16,13 @@ Cache in memory with gRPC generate API:
 - Increment value using a key
 - Calls can be made using goroutines on the client side.(concurrency safe)
 
-### Local
+### Running Server
 
 You can run application locally
 
 ```bash
 start server `./mockredis-server` or `make server`
-`./server-cache -addr=":12345"` to run server on port `12345`
+`./mockredis-server -addr=":12345"` to run server on port `12345`
 ```
 
 ## Testing
