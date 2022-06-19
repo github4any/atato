@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option go_package = "./";
+
+// Item is what is stored in the cache
+message Item {
+  string key = 1;
+  string value = 2;
+  string expiration = 3;
+}
+
+message GetKey {
+    string key = 1;
+}
+
+message Success {
+  bool success = 1;
+}
+
+service CacheService {
+    rpc Set (Item) returns (Item);
+    rpc Dump (GetKey) returns (Item);
+    rpc Incr(GetKey) returns (Success);
+}
+
